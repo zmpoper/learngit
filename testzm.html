@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>😄😄😠😠</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+</head>
+
+<body>
+    <form id="test-form" action="test">
+        <legend>请选择想要学习的编程语言：</legend>
+        <fieldset>
+            <p><label class="selectAll"><input type="checkbox"> 
+                <span class="selectAll">全选</span>
+                <span class="deselectAll">全不选</span></label> <a href="#0" class="invertSelect">反选</a></p>
+            <p><label><input type="checkbox" name="lang" value="javascript"> JavaScript</label></p>
+            <p><label><input type="checkbox" name="lang" value="python"> Python</label></p>
+            <p><label><input type="checkbox" name="lang" value="ruby"> Ruby</label></p>
+            <p><label><input type="checkbox" name="lang" value="haskell"> Haskell</label></p>
+            <p><label><input type="checkbox" name="lang" value="scheme"> Scheme</label></p>
+            <p><button type="submit">Submit</button></p>
+        </fieldset>
+    </form>
+</body>
+<script>
+    var
+        form = $('#test-form'),
+        langs = form.find('[name=lang]'),
+        selectAll = form.find('label.selectAll :checkbox'),
+        selectAllLabel = form.find('label.selectAll span.selectAll'),
+        deselectAllLabel = form.find('label.selectAll span.deselectAll'),
+        invertSelect = form.find('a.invertSelect');
+
+    // 重置初始化状态:
+        form.find('*').show().off();
+        form.find(':checkbox').prop('checked', false).off();
+        deselectAllLabel.hide();
+        // 拦截form提交事件:
+        form.off().submit(function (e) {
+            e.preventDefault();
+            alert(form.serialize());
+        });
+
+        selectAll.change(()=>{
+                langs.prop('checked',selectAll.prop('checked'));
+                selectAllLabel.toggle();
+                deselectAllLabel.toggle();
+                
+        });
+        invertSelect.click(()=>{
+            // langs.prop('checked',);
+            
+            langs.map(()=>{
+                langs.prop('checked',(index,value)=>!value)
+            });
+
+        });
+        langs.change(()=>{
+            var checkedLangs = langs.filter(()=>{
+                return langs.prop('checked');
+            });
+            // var checkedLangs = langs.filter(function () {
+
+            // return $(this).prop('checked');
+            // });
+           
+            if( checkedLangs.length===langs.length){
+               selectAll.prop('checked',true);
+               selectAllLabel.hide();
+               deselectAllLabel.show();
+               alert("成功");
+            }else{
+                selectAll.prop('checked',false);
+                selectAllLabel.show();
+                deselectAllLabel.hide();
+                
+            }
+        });
+
+        
+</script>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue html demo</title>
+    <script src="./lib/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <!-- 父组件可以引用属性绑定的形式 把需要的数据传给子组件-->
+            <!--  子组件调用父组件中的方法，是通过事件绑定机制-->
+            <com1 :parentmsg="msg" @func="show"></com1>
+        </div>
+        <script>
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    msg: '123父组件中的data',
+                    datamsgFromSon:null
+                },
+                methods:{
+                    show(data){
+                        console.log(data)
+                        this.datamsgFromSon=data;
+                    }
+
+                },
+                components: {
+                    //结论：经过演示，子组件中，默认无法访问到 父组件中的data和methods
+                    com1:{
+                        data(){//注意：子组件中的data数据，并不是通过 父组件传递过来的， 而是子组件自己私有的，比如
+                            //子组件通过Ajax，请求回来的数据，都可以放到data身上；
+                            return{
+                               sonmsg:{ title: '123',
+                                content: 'qqq'
+                                }
+                            }
+                        },
+                        template:'<div><h1>这是一个子组件---{{parentmsg}}</h1><input type="button" value="这是子组件中的按钮" @click="myclick"></div>',
+                        props:['parentmsg'],//把父组件传递过来的属性，在props中定义一下,props中都是只读的，但是data中是可读可写的
+                        methods: {
+                            myclick(){
+                                console.log('ok');
+                                // emit就是发射的意思，在这里是触发子组件绑定的父组件方法
+                                this.$emit('func',this.sonmsg)
+                            }
+                        }
+                    }
+
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>😄开心😄</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="test-div">
+        <div class="c-red">
+            <p id="test-p">JavaScript</p>
+            <p>Java</p>
+        </div>
+        <div class="c-red c-green">
+            <p>Python</p>
+            <p>Ruby</p>
+            <p>Swift</p>
+        </div>
+        <div class="c-green">
+            <p>Scheme</p>
+            <p>Haskell</p>
+        </div>
+    </div>
+    <div id="test1-div">
+        <ul>
+            <li><span>JavaScript</span></li>
+            <li><span>Python</span></li>
+            <li><span>Swift</span></li>
+        </ul>
+    </div>
+    <input id="test-input" name="email" value="test">
+    <select id="test-select" name="city">
+        <option value="BJ" selected>Beijing</option>
+        <option value="SH">Shanghai</option>
+        <option value="SZ">Shenzhen</option>
+    </select>
+    <textarea id="test-textarea">Hello</textarea>
+
+</body>
+
+</html>
+<script>
+    // 选择<p>JavaScript</p>:
+    var d = document.createElement('style');
+    d.setAttribute('type', 'text/css');
+    d.innerHTML = 'p { color: red }';
+    document.getElementsByTagName('head')[0].appendChild(d);
+
+
+    var js = $('#test-p');
+    alert(js);
+
+
+    // 选择<p>Python</p>,<p>Ruby</p>,<p>Swift</p>:
+    var arr = $('[class="c-red c-green"]').text();
+    // alert (arr[0].innerText);
+    // alert (arr[1].innerText);
+    // alert (arr[2].innerText);
+    // 选择<p>Haskell</p>:
+    alert(arr);
+    var haskell = document.getElementById('test-div').getElementsByClassName('c-green')[1].children[1];
+    // 测试:
+    // if (!js || js.innerText !== 'JavaScript') {
+    //     alert('选择JavaScript失败!');
+    // } else if (!arr || arr.length !== 3 || !arr[0] || !arr[1] || !arr[2] || arr[0].innerText !== 'Python' || arr[1].innerText !== 'Ruby' || arr[2].innerText !== 'Swift') {
+    //     alert('选择Python,Ruby,Swift失败!');
+    // } else if (!haskell || haskell.innerText !== 'Haskell') {
+    //     alert('选择Haskell失败!');
+    // } else {
+    //     alert('测试通过!');
+    // }
+    // var url = 'https://api.openweathermap.org/data/2.5/forecast?q=Beijing,cn&appid=800f49846586c3ba6e7052cfc89af16c';
+    // $.getJSON(url, function (data) {
+    //     var info = {
+    //         city: data.city.name,
+    //         weather: data.list[0].weather[0].main,
+    //         time: data.list[0].dt_txt
+    //     };
+    //     alert(JSON.stringify(info, null, '  '));
+    // });
+    var input = $('#test-input'),
+        select = $('#test-select'),
+        textarea = $('#test-textarea');
+    select.val();
+    alert(input.val());
+    input.val('abc@example.com');
+
+    var ul = $('#test1-div>ul');
+    var str = ['Lua', 'Pascal', 'Ruby'];
+    str.map(s => { ul.append('<li><span>' + s + '</span></li>') });
+    var list = ul.find('li');
+    list.sort((li1, li2) => {
+        return $('li1').text() > $('li2').text() ? 1 : -1;
+    });
+    ul.append(list);
+
+
+</script>
