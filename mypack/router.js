@@ -37,4 +37,10 @@ router.put('/books/book',service.editBook);
 //删除图书信息
 router.delete('/books/book/:id',service.delBook);
 
+//轮播图测试数据模拟
+router.get('/api/getlunbo',service.getLunbo);
+
+//新闻资讯测试数据模拟
+router.get('/api/getnewslist',service.getNewsList)
+
 module.exports = router;

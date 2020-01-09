@@ -148,3 +148,28 @@ exports.delBook = (req,res)=>{
     // writeDataToFile(res);
 
 }
+//轮播图测试数据
+exports.getLunbo = (req, res) => {
+    res.json([{url:"https://www.baidu.com",img:"http://localhost:1337/img/muwu.jpg"},
+    {url:"https://www.baidu.com",img:"http://localhost:1337/img/yuantiao.jpg"}])
+}
+exports.getNewsList =(req,res) =>{
+    res.json([{id:15,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
+    {id:1,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
+    {id:2,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
+    {id:3,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
+    {id:4,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
+    {id:5,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
+    {id:6,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
+    {id:7,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
+    {id:8,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
+    {id:9,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
+    {id:10,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
+    {id:11,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
+    {id:12,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
+    {id:13,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
+    {id:14,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
+])
+}
+
+//新闻资讯测试数据
