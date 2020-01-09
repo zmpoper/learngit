@@ -36,14 +36,21 @@ const fs = require('fs')
 //     })
 // })
 
-
+//初衷： 给路径，返沪读取到的内容
 function getFilePath(fpath){
-    var promise = new Promise(function(){
+    return  new Promise(function(resolve,reject){
 
         fs.readFile(fpath,'utf-8',(err,dataStr)=>{
-            if (err) throw err
-            console.log(dataStr);
+            // if (err) throw err
+            // console.log(dataStr);
+            if(err) reject(err) 
+            resolve(dataStr)
         })
     })
+    
 }
-getFilePath('./files/2.txt')
+getFilePath('./files/1.txt').then(function(data){
+    console.log(data+'-----');
+},function(err){
+    console.log(err.message);
+})
