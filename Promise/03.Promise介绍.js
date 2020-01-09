@@ -18,6 +18,32 @@
 //var promise = new Promise()
 
 //这是一个具体的异步操作，其中，使用function 指定一个具体的异步操作
-var promise = new Promise(function(){
-    //这个 function 内部写的就是具体的异步操作！！！
-})
+// var promise = new Promise(function(){
+//     //这个 function 内部写的就是具体的异步操作！！！
+    
+// })
+
+
+const fs = require('fs')
+//每当new一个 Promise 实例的时候，就会立即 执行这个 异步操作中的代码
+//也就是说，new 的时候，除了能够得到一个promise 实例之外，还会立即调用 我们为Promise
+//构造函数传递的那个function，执行这个function中的异步操作代码
+// var promise = new Promise(function(){
+
+//     fs.readFile('./files/2.txt','utf-8',(err,dataStr)=>{
+//         if (err) throw err
+//         console.log(dataStr);
+//     })
+// })
+
+
+function getFilePath(fpath){
+    var promise = new Promise(function(){
+
+        fs.readFile(fpath,'utf-8',(err,dataStr)=>{
+            if (err) throw err
+            console.log(dataStr);
+        })
+    })
+}
+getFilePath('./files/2.txt')
