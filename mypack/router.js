@@ -47,6 +47,9 @@ router.get('/api/getnewslist',service.getNewsList);
 router.get('/api/getnewsinfo/:id',service.getNewsInfo);
 
 //评论数据模拟
-router.get('/api/getcomments/:id',service.getComments)
+router.get('/api/getcomments/:id',service.getComments);
+
+//发表评论数据模拟
+router.post('/api/postcomment/:id',service.postComment);
 
 module.exports = router;

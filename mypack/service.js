@@ -209,3 +209,24 @@ exports.getComments =(req,res) =>{
 {user_name:"李白",add_time:"2015-04-21T03:50:28.000Z",content:"评论评论评论"},{user_name:"李白",add_time:"2015-04-22T03:50:28.000Z",content:"评论评论评论"},
 {user_name:"李白",add_time:"2015-04-23T03:50:28.000Z",content:"评论评论评论"}])
 }
+
+//发表评论
+exports.postComment = (req, res) => {
+    //获取表单数据
+    // let info = req.body;
+    // console.log(info);
+    // let sql = 'insert into book set ?';
+    // if (info.name!=null){
+    //     db.base(sql,info,(result)=>{
+    //         if(result.affectedRows == 1){
+    //             res.json({flag:1});
+    //         }else{
+    //             res.json({flag:2});
+    //         }
+    //     });
+    // }
+    // else{
+    //     res.json({flag:2});
+    // }
+    res.json({flag:1})
+}
