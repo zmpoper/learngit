@@ -6,14 +6,27 @@ const fs = require('fs');
 const path = require('path');
 const db = require('./db.js');
 
-var test = '<!DOCTYPE html>'+
-'<html>'+
-'<head>'+
-'<meta charset="utf-8" />'+
-'<title>兔子城堡</title>'+
-'</head>'+
-'<body>哈哈哈啰我的</body>'+
-'</html>'
+var strVar = "";
+    strVar += "<!DOCTYPE html><html>\n";
+    strVar += "<head><meta charset=\"utf-8\"/><script src=\"http://code.jquery.com/jquery-latest.min.js\"><\/script><\/head>\n";
+    strVar += "<body>\n";
+    strVar += "<div id=\"wrap\"><div id=\"header\"><h1>html在线工具<\/h1>\n";
+    strVar += "<!--   如果有用，请别忘了推荐给你的朋友：		-->\n";
+    strVar += "<!--   Html在线美化、格式化：https://tool.lu/html   -->\n";
+    strVar += "<\/div>\n";
+    strVar += "<div id=\"main\">\n";
+    strVar += "	<!-- [history] -->\n";
+    strVar += "	<dl>\n";
+    strVar += "	<dt>v1.0<\/dt> <dd>2011-06-05 Html工具上线<\/dd>\n";
+    strVar += "	<dt>v1.1<\/dt> <dd>2012-01-14 修复美化功能，增加压缩<\/dd>\n";
+    strVar += "	<dt>v1.2<\/dt> <dd>2012-07-20 增加清除链接功能<\/dd>\n";
+    strVar += "	<dt>v1.3<\/dt> <dd>2014-08-05 修改 html 压缩引擎<\/dd>\n";
+    strVar += "	<dt>v1.4<\/dt> <dd>2014-08-09 增加转换为js变量的功能<\/dd>\n";
+    strVar += "	<\/dl>\n";
+    strVar += "<\/div>\n";
+    strVar += "<div id=\"footer\">This is just an example.<\/div>\n";
+    strVar += "<\/div>\n";
+    strVar += "<\/body><\/html>\n";
 // //自动生成图书编号（自增）
 // let maxBookCode = () => {
 //     let arr = [];
@@ -186,5 +199,13 @@ exports.getNewsList =(req,res) =>{
 //新闻资讯点击后测试数据
 
 exports.getNewsInfo =(req,res) =>{
-    res.json({id:15,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,content:"<h3>这是详情</h3>"})
+    res.json({id:15,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,content:strVar})
+}
+
+//评论测试数据
+exports.getComments =(req,res) =>{
+    res.json([{user_name:"李白",add_time:"2015-04-16T03:50:28.000Z",content:"评论评论评论"},{user_name:"李白",add_time:"2015-04-17T03:50:28.000Z",content:"评论评论评论"},{user_name:"李白",add_time:"2015-04-18T03:50:28.000Z",content:"评论评论评论"}
+,{user_name:"李白",add_time:"2015-04-19T03:50:28.000Z",content:"评论评论评论"},{user_name:"李白",add_time:"2015-04-20T03:50:28.000Z",content:"评论评论评论"},
+{user_name:"李白",add_time:"2015-04-21T03:50:28.000Z",content:"评论评论评论"},{user_name:"李白",add_time:"2015-04-22T03:50:28.000Z",content:"评论评论评论"},
+{user_name:"李白",add_time:"2015-04-23T03:50:28.000Z",content:"评论评论评论"}])
 }

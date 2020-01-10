@@ -46,4 +46,7 @@ router.get('/api/getnewslist',service.getNewsList);
 //新闻资讯点击后详情展示数据模拟
 router.get('/api/getnewsinfo/:id',service.getNewsInfo);
 
+//评论数据模拟
+router.get('/api/getcomments/:id',service.getComments)
+
 module.exports = router;
