@@ -41,6 +41,9 @@ router.delete('/books/book/:id',service.delBook);
 router.get('/api/getlunbo',service.getLunbo);
 
 //新闻资讯测试数据模拟
-router.get('/api/getnewslist',service.getNewsList)
+router.get('/api/getnewslist',service.getNewsList);
+
+//新闻资讯点击后详情展示数据模拟
+router.get('/api/getnewsinfo/:id',service.getNewsInfo);
 
 module.exports = router;

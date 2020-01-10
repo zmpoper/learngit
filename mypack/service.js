@@ -5,6 +5,15 @@ const fs = require('fs');
 // let data = require('./data.json');
 const path = require('path');
 const db = require('./db.js');
+
+var test = '<!DOCTYPE html>'+
+'<html>'+
+'<head>'+
+'<meta charset="utf-8" />'+
+'<title>兔子城堡</title>'+
+'</head>'+
+'<body>哈哈哈啰我的</body>'+
+'</html>'
 // //自动生成图书编号（自增）
 // let maxBookCode = () => {
 //     let arr = [];
@@ -153,6 +162,9 @@ exports.getLunbo = (req, res) => {
     res.json([{url:"https://www.baidu.com",img:"http://localhost:1337/img/muwu.jpg"},
     {url:"https://www.baidu.com",img:"http://localhost:1337/img/yuantiao.jpg"}])
 }
+
+
+//新闻资讯测试数据
 exports.getNewsList =(req,res) =>{
     res.json([{id:15,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
     {id:1,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
@@ -171,5 +183,8 @@ exports.getNewsList =(req,res) =>{
     {id:14,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
 ])
 }
+//新闻资讯点击后测试数据
 
-//新闻资讯测试数据
+exports.getNewsInfo =(req,res) =>{
+    res.json({id:15,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,content:"<h3>这是详情</h3>"})
+}
