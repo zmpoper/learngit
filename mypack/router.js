@@ -52,4 +52,10 @@ router.get('/api/getcomments/:id',service.getComments);
 //发表评论数据模拟
 router.post('/api/postcomment/:id',service.postComment);
 
+//图片-分类数据模拟
+router.get('/api/getimgcategory',service.getImgCate)
+
+//图片
+router.get('/api/getimage/:id',service.getImage)
+
 module.exports = router;

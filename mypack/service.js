@@ -230,3 +230,16 @@ exports.postComment = (req, res) => {
     // }
     res.json({flag:1})
 }
+//滑动列表
+exports.getImgCate = (req,res)=>{
+    res.json([{title:"家居生活",id:1},{title:"摄影设计",id:2},{title:"明星美女",id:3},{
+        title:"小吃美食",id:4 },{title:"旅游景点",id:5}])
+}
+//图片
+exports.getImage = (req, res) => {
+    res.json([{id:1,title:"标题",zhaiyao:"摘要",img_url:"http://localhost:1337/img/muwu.jpg"},
+    {id:2,title:"标题",zhaiyao:"摘要",img_url:"http://localhost:1337/img/yuantiao.jpg"},
+    {id:3  ,title:"标题",zhaiyao:"摘要",img_url:"http://localhost:1337/img/shuijiao.jpg"},
+    {id:4,title:"标题",zhaiyao:"摘要",img_url:"http://localhost:1337/img/qrcode.png"}
+    ])
+}
