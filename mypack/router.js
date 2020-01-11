@@ -58,4 +58,10 @@ router.get('/api/getimgcategory',service.getImgCate)
 //图片
 router.get('/api/getimage/:id',service.getImage)
 
+//图片详情
+router.get('/api/getimageInfo/:id',service.getImageInfo)
+
+//图片绿缩图
+router.get('/api/getthumimages/:id',service.getThumImages)
+
 module.exports = router;

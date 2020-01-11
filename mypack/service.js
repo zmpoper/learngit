@@ -243,3 +243,13 @@ exports.getImage = (req, res) => {
     {id:4,title:"标题",zhaiyao:"摘要",img_url:"http://localhost:1337/img/qrcode.png"}
     ])
 }
+//图片详情
+exports.getImageInfo = (req,res)=>{
+    res.json({id:15,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,content:strVar})
+ 
+}
+
+//略缩图
+exports.getThumImages = (req,res)=>{
+    res.json([{src:"https://placekitten.com/600/400"},{src: "https://placekitten.com/1200/900"},{src:"https://placekitten.com/200/300"}])
+}
