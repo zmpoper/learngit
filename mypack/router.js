@@ -64,4 +64,7 @@ router.get('/api/getimageInfo/:id',service.getImageInfo)
 //图片绿缩图
 router.get('/api/getthumimages/:id',service.getThumImages)
 
+//商品列表
+router.get('/api/getgoodslist',service.getGoodsList)
+
 module.exports = router;

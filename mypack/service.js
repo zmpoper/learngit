@@ -172,28 +172,28 @@ exports.delBook = (req,res)=>{
 }
 //轮播图测试数据
 exports.getLunbo = (req, res) => {
-    res.json([{url:"https://www.baidu.com",img:"http://localhost:1337/img/muwu.jpg"},
-    {url:"https://www.baidu.com",img:"http://localhost:1337/img/yuantiao.jpg"}])
+    res.json([{url:"https://www.baidu.com",img:"http://192.168.1.2:1337/img/muwu.jpg"},
+    {url:"https://www.baidu.com",img:"http://192.168.1.2:1337/img/yuantiao.jpg"}])
 }
 
 
 //新闻资讯测试数据
 exports.getNewsList =(req,res) =>{
-    res.json([{id:15,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
-    {id:1,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
-    {id:2,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
-    {id:3,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
-    {id:4,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
-    {id:5,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
-    {id:6,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
-    {id:7,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
-    {id:8,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
-    {id:9,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
-    {id:10,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
-    {id:11,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
-    {id:12,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
-    {id:13,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
-    {id:14,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://localhost:1337/img/yuantiao.jpg"},
+    res.json([{id:15,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://192.168.1.2:1337/img/yuantiao.jpg"},
+    {id:1,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://192.168.1.2:1337/img/yuantiao.jpg"},
+    {id:2,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://192.168.1.2:1337/img/yuantiao.jpg"},
+    {id:3,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://192.168.1.2:1337/img/yuantiao.jpg"},
+    {id:4,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://192.168.1.2:1337/img/yuantiao.jpg"},
+    {id:5,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://192.168.1.2:1337/img/yuantiao.jpg"},
+    {id:6,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://192.168.1.2:1337/img/yuantiao.jpg"},
+    {id:7,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://192.168.1.2:1337/img/yuantiao.jpg"},
+    {id:8,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://192.168.1.2:1337/img/yuantiao.jpg"},
+    {id:9,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://192.168.1.2:1337/img/yuantiao.jpg"},
+    {id:10,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://192.168.1.2:1337/img/yuantiao.jpg"},
+    {id:11,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://192.168.1.2:1337/img/yuantiao.jpg"},
+    {id:12,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://192.168.1.2:1337/img/yuantiao.jpg"},
+    {id:13,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://192.168.1.2:1337/img/yuantiao.jpg"},
+    {id:14,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,img_url:"http://192.168.1.2:1337/img/yuantiao.jpg"},
 ])
 }
 //新闻资讯点击后测试数据
@@ -237,10 +237,10 @@ exports.getImgCate = (req,res)=>{
 }
 //图片
 exports.getImage = (req, res) => {
-    res.json([{id:1,title:"标题",zhaiyao:"摘要",img_url:"http://localhost:1337/img/muwu.jpg"},
-    {id:2,title:"标题",zhaiyao:"摘要",img_url:"http://localhost:1337/img/yuantiao.jpg"},
-    {id:3  ,title:"标题",zhaiyao:"摘要",img_url:"http://localhost:1337/img/shuijiao.jpg"},
-    {id:4,title:"标题",zhaiyao:"摘要",img_url:"http://localhost:1337/img/qrcode.png"}
+    res.json([{id:1,title:"标题",zhaiyao:"摘要",img_url:"http://192.168.1.2:1337/img/muwu.jpg"},
+    {id:2,title:"标题",zhaiyao:"摘要",img_url:"http://192.168.1.2:1337/img/yuantiao.jpg"},
+    {id:3  ,title:"标题",zhaiyao:"摘要",img_url:"http://192.168.1.2:1337/img/shuijiao.jpg"},
+    {id:4,title:"标题",zhaiyao:"摘要",img_url:"http://192.168.1.2:1337/img/qrcode.png"}
     ])
 }
 //图片详情
@@ -252,4 +252,14 @@ exports.getImageInfo = (req,res)=>{
 //略缩图
 exports.getThumImages = (req,res)=>{
     res.json([{src:"https://placekitten.com/600/400"},{src: "https://placekitten.com/1200/900"},{src:"https://placekitten.com/200/300"}])
+}
+
+//商品列表
+exports.getGoodsList = (req,res)=>{
+    //  取?pageindex的值
+    // console.log(req.query.pageindex);
+    res.json([{id:1,title:"可爱的小猫禁止售卖！！！！！！",zhaiyao:"可爱的小猫可爱的小猫",img_url:"https://placekitten.com/600/400",
+        sell_price:2195,market_price:2499,stock_quantity:60},{id:2,title:"可爱的小猫禁止售卖！！！！！！！可爱的小猫禁止售卖！！！！！！！",zhaiyao:"可爱的小猫可爱的小猫",img_url:"https://placekitten.com/600/400",
+        sell_price:2195,market_price:2499,stock_quantity:60},{id:3,title:"可爱的小猫禁止售卖！！！！！！",zhaiyao:"可爱的小猫可爱的小猫",img_url:"https://placekitten.com/600/400",
+        sell_price:2195,market_price:2499,stock_quantity:60}])
 }
