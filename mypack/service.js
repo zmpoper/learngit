@@ -263,3 +263,8 @@ exports.getGoodsList = (req,res)=>{
         sell_price:2195,market_price:2499,stock_quantity:60},{id:3,title:"可爱的小猫禁止售卖！！！！！！",zhaiyao:"可爱的小猫可爱的小猫",img_url:"https://placekitten.com/600/400",
         sell_price:2195,market_price:2499,stock_quantity:60}])
 }
+
+exports.getGoodsInfo = (req,res)=>{
+    res.json([{id:1,title:"可爱的小猫禁止售卖！！！！！！",add_time:"2015-04-19T03:50:28.000Z",goods_no:"SD3973042344",
+    sell_price:2195,market_price:2499,stock_quantity:60}])
+}

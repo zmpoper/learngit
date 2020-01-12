@@ -67,4 +67,6 @@ router.get('/api/getthumimages/:id',service.getThumImages)
 //商品列表
 router.get('/api/getgoodslist',service.getGoodsList)
 
+//商品详情
+router.get('/api/goods/getinfo/:id',service.getGoodsInfo)
 module.exports = router;
