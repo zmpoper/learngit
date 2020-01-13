@@ -69,4 +69,7 @@ router.get('/api/getgoodslist',service.getGoodsList)
 
 //商品详情
 router.get('/api/goods/getinfo/:id',service.getGoodsInfo)
+
+//商品图文测试数据
+router.get('/api/goods/getdesc/:id',service.getDesc)
 module.exports = router;
