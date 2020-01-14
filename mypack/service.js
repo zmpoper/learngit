@@ -258,9 +258,9 @@ exports.getThumImages = (req,res)=>{
 exports.getGoodsList = (req,res)=>{
     //  取?pageindex的值
     // console.log(req.query.pageindex);
-    res.json([{id:1,title:"可爱的小猫禁止售卖！！！！！！",zhaiyao:"可爱的小猫可爱的小猫",img_url:"https://placekitten.com/600/400",
-        sell_price:2195,market_price:2499,stock_quantity:60},{id:2,title:"可爱的小猫禁止售卖！！！！！！！可爱的小猫禁止售卖！！！！！！！",zhaiyao:"可爱的小猫可爱的小猫",img_url:"https://placekitten.com/600/400",
-        sell_price:2195,market_price:2499,stock_quantity:60},{id:3,title:"可爱的小猫禁止售卖！！！！！！",zhaiyao:"可爱的小猫可爱的小猫",img_url:"https://placekitten.com/600/400",
+    res.json([{id:1,title:"A可爱的小猫禁止售卖！！！！！！",zhaiyao:"可爱的小猫可爱的小猫",img_url:"https://placekitten.com/600/400",
+        sell_price:2195,market_price:2499,stock_quantity:60},{id:2,title:"B可爱的小猫禁止售卖！！！！！！！可爱的小猫禁止售卖！！！！！！！",zhaiyao:"可爱的小猫可爱的小猫",img_url:"https://placekitten.com/600/400",
+        sell_price:2195,market_price:2499,stock_quantity:60},{id:3,title:"C可爱的小猫禁止售卖！！！！！！",zhaiyao:"可爱的小猫可爱的小猫",img_url:"https://placekitten.com/600/400",
         sell_price:2195,market_price:2499,stock_quantity:60}])
 }
 
@@ -272,4 +272,22 @@ exports.getGoodsInfo = (req,res)=>{
 exports.getDesc = (req,res)=>{
     res.json({id:15,title:"1季度多家房企利润跌幅超50%",add_time:"2015-04-16T03:50:28.000Z",zhaiyao:"克而瑞研究中心统计",click:1,content:strVar})
  
+}
+
+//购物车页面商品
+exports.getShopCar = (req,res)=>{
+    let sql = 'select * from shopcar where id in (?)';
+    //将逗号分割符转为数组格式
+    let data = req.params.ids.split(',');
+    //将data传入时得使用[]包裹起来
+    db.base(sql,[data],(result)=>{
+        console.log(sql);
+        res.json(result);
+
+    });
+    //可以根据ids设置数据库
+    // res.json([{id:1,title:"A可爱的小猫禁止售卖！！！！！！",zhaiyao:"可爱的小猫可爱的小猫",thum_path:"https://placekitten.com/600/400",
+    // sell_price:2195,market_price:2499,stock_quantity:60},{id:2,title:"B可爱的小猫禁止售卖！！！！！！",zhaiyao:"可爱的小猫可爱的小猫",thum_path:"https://placekitten.com/600/400",
+    // sell_price:2195,market_price:2499,stock_quantity:60},{id:3,title:"C可爱的小猫禁止售卖！！！！！！",zhaiyao:"可爱的小猫可爱的小猫",thum_path:"https://placekitten.com/600/400",
+    // sell_price:2195,market_price:2499,stock_quantity:60}])
 }

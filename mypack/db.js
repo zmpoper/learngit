@@ -15,6 +15,5 @@ exports.base = (sql, data, callback) => {
         if (error) throw error;
         callback(results);
     });
-
     connection.end();
 };
