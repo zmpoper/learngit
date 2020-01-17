@@ -37,7 +37,8 @@ module.exports ={
             {test:/\.scss$/,use:['style-loader','css-loader','sass-loader']},
             {test:/\.(jpg|png|gif|bmp|jpeg)$/,use:'url-loader?limit=7631&name=[hash:8]-[name].[ext]'},
             {test:/\.(ttf|eot|svg|woff|woff2)$/,use:'url-loader'},//字体
-            {test:/\.js$/,use:'babel-loader',exclude:/node_modules/},//配置babel转换
+            {test:/\.jsx?$/,use:'babel-loader',exclude:/node_modules/},//配置babel转换
+
 
         ]
     }
