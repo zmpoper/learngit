@@ -32,7 +32,15 @@ module.exports ={
         //这个节点，用于配置所有第三方模块加载器
         rules:[
             //所有第三方模块的匹配规则
-            {test:/\.css$/,use:['style-loader','css-loader']},
+            {test:/\.css$/,use:[{loader:'style-loader'},
+                                {loader:'css-loader',
+                                 options:{
+                                    modules:{
+                                       localIdentName:"[name]_[local]-[hash:5]"
+                                    }
+                                 }
+                                }
+                               ]},//通过加?modules为css启用模块化
             {test:/\.less$/,use:['style-loader','css-loader','less-loader']},
             {test:/\.scss$/,use:['style-loader','css-loader','sass-loader']},
             {test:/\.(jpg|png|gif|bmp|jpeg)$/,use:'url-loader?limit=7631&name=[hash:8]-[name].[ext]'},

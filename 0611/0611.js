@@ -54,7 +54,7 @@ setTimeout(function () {
  //就按照这三个后缀的顺序依次查找，优先找js，其次json，最后node
 
  /**
-  * 全局安装 -g
+  * 全局安装 -g 全局安装的包一般用于命令行工具 比如cnpm
   * 本地安装
   * npm常用的命令：
   * 1、安装包
@@ -63,4 +63,8 @@ setTimeout(function () {
   * npm install 包名称（本地安装）
   * 2、安装包的时候可以指定版本
   * npm install -g 包名@版本号
+  * 3、卸载包
+  * npm uninstall -g 包名
+  * 4、更新包（更新到最新版本）
+  * npm update -g 包名
   */
