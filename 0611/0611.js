@@ -55,7 +55,7 @@ setTimeout(function () {
 
  /**
   * 全局安装 -g 全局安装的包一般用于命令行工具 比如cnpm
-  * 本地安装
+  * 本地安装 一般用于开发某种具体的功能
   * npm常用的命令：
   * 1、安装包
   * npm install -g 包名称（全局安装）
@@ -65,6 +65,8 @@ setTimeout(function () {
   * npm install -g 包名@版本号
   * 3、卸载包
   * npm uninstall -g 包名
-  * 4、更新包（更新到最新版本）
+  * 4、更新包（更新到最新版本）其实也可以直接用install
   * npm update -g 包名
+  * 
+  * hello目录中演示如何生成一个包，并且如何使用一个包
   */
