@@ -61,9 +61,9 @@ setTimeout(function () {
   * npm install -g 包名称（全局安装）
   * 全局安装的包都在/usr/local/lib/node_modules路径下面
   * npm install 包名称（本地安装）
-  * 2、安装包的时候可以指定版本
+  * 2、安装包的时候可以指定版本（本地包不用-g)
   * npm install -g 包名@版本号
-  * 3、卸载包
+  * 3、卸载包(本地包不用-g)
   * npm uninstall -g 包名
   * 4、更新包（更新到最新版本）其实也可以直接用install
   * npm update -g 包名
