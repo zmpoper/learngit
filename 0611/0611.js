@@ -69,4 +69,45 @@ setTimeout(function () {
   * npm update -g 包名
   * 
   * hello目录中演示如何生成一个包，并且如何使用一个包
+  * 
+  * npm安装包的两个选项
+  * npm install 包名 --save  向生产环境添加依赖 dependencies
+  * npm install 包名 --save-dev 向开发环境添加依赖 DevDependencies
+  * 
+  * npm install --production 会根据package.json中的dependencies
+  * 安装依赖的包（生产环境） 
+  * 
+  * npm install 会安装所有（包含生产环境和开发环境，也就是dependencies和DevDependencies)
+  * 
+  * 
+  * yarn工具基本使用
+  * 安装yarn工具：npm install -g yarn
+  * 
+  * 1、初始化包
+  * npm init
+  * yarn init
+  * 2、安装包
+  * npm install xxx --save
+  * yarn add xxx
+  * 3、移除包
+  * npm install xxx
+  * yarn remove xxx
+  * 4、更新包
+  * npm update xxx
+  * yarn upgrade xxx
+  * 5、安装开发依赖的包
+  * npm install xxx --save-dev
+  * yarn add xxx -dev
+  * 6、全局安装
+  * npm install -g xxx
+  * yarn global add xxx
+  * 7、设置下载镜像的地址
+  * npm config set registry url
+  * yarn config set registry url
+  * 8、安装所有依赖
+  * npm install
+  * yarn install
+  * 9、执行包
+  * npm run
+  * yarn run
   */
