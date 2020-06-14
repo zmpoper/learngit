@@ -35,7 +35,9 @@ $(function(){
                     addBook();
                     //重置表单
                     var form = $('#addBookForm');
+                    //重置表单但是不能清空隐藏域
                     form.get(0).reset();
+                    //重置隐藏域
                     form.find('input[type=hidden]').val('');
                 });
             }
