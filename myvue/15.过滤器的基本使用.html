@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue html demo</title>
+    <script src="./lib/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <p>{{msg|msgFormat('疯狂+1')}}</p>
+        </div>
+        <script>
+            /***全局的过滤器****/
+            //第一个参数可以拿到管道符前面的msg，第二个参数可以传递值,也可以传递多个参数
+            // Vue.filter('msgFormat',(data,arg)=>{
+            //     return data.replace(/善良/g,arg)
+            // })
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    msg: '我还是从前那个少年，没有一点点改变，依旧善良，善良的我，喜欢上了善良的她'
+
+                },
+                methods:{
+
+                },
+                filters: {
+                    msgFormat(data,arg){
+                        return data.replace(/善良/g,arg) 
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -55,10 +55,15 @@
             
         </div>
         <script>
+            //如果我们通过全局配置了，请求的数据接口 根域名，则每次单独发起http请求的时候，请求的url路径
+            //应该以相对路径开头，前面不能带/，否则不会启用根路径做拼接
+            Vue.http.options.root = 'http://127.0.0.1:1337/'
+            //全局启用emulateJSON选项
             Vue.http.options.emulateJSON=true;
             var vm = new Vue({
                 el: '#app',
                 data: {
+                    name:'',
                     list:[
                         {id: 1, name: '保时捷',author:'周敏',category:'没所谓',description:'啦啦啦'},
                         {id: 2, name: '宝马', author:'高大哼',category:'憨憨',description:'嘿嘿' }
@@ -78,9 +83,10 @@
                     //     });
                     // },
                     add(){
-                        this.$http.post('http://127.0.0.1:1337/books/book',{name: this.name}).then((result) => {
+                        this.$http.post('books/book',{name: this.name,author:this.name,category:this.name,description:this.name}).then((result) => {
                            if(result.status===200){
                                this.getAllList();
+                               //清空name
                                this.name='';
                            }
                         }).catch((err) => {
@@ -90,7 +96,7 @@
                         });
                     },
                     getAllList(){//获取所有列表
-                        this.$http.get('http://127.0.0.1:1337/books').then((result) => {
+                        this.$http.get('books').then((result) => {
                             //注意，通过$http.获取的数据都在body里面
                             console.log(result);
                             if(result.status===200){
@@ -101,7 +107,7 @@
                         });
                     },
                     del(id){
-                        this.$http.delete('http://127.0.0.1:1337/books/book/'+id).then((result) => {
+                        this.$http.delete('books/book/'+id).then((result) => {
                             console.log(result);
                            if(result.status===200) {
 

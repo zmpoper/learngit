@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/vue.js"></script>
+</head>
+<body>
+    <div id="app"> 
+            <input type="button" value="浪起来" @click="start"> 
+            <input type="button" value="低调" @click="stop">
+            <h2 v-text="msg"></h2>
+    </div>
+    <script>
+        //注意： 在VM实例中，如果想要获取data上的数据，或者想要调用methods中的方法，必须通过
+        //this.数据属性名 或 this.方法名 来进行访问，这里的this,就表示 我们new出来的VM实例对象
+        var vm = new new Vue({
+            el : '#app',
+            data:{
+                msg : '猥琐发育，别浪～～!',
+                intervalId : null //定义定时器的Id
+            },
+            methods: {
+                start(){
+                    if(this.intervalId !=null)return
+                   this.intervalId = setInterval(()=>{
+                        var start = this.msg.substring(0, 1)
+                        var end = this.msg.substring(1)
+                        this.msg = end + start
+                    //注意：VM实例，会监听自己身上data中所有数据的改变
+                    //程序员只需要关心数据操作，不用关心数据的重新渲染
+                    },400)
+                    
+                },
+                stop(){
+                    clearInterval(this.intervalId)
+                    //每当清除了定时器，需要把定时器置为null
+                    this.intervalId = null;
+                }
+
+                
+            }
+            
+        })
+    </script>
+   
+</body>
+</html>

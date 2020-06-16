@@ -10,7 +10,7 @@
     </head>
     <body>
         <div id="app">
-            <input type="button" value="修改msg" @click="msg='no'">
+            <input  type="button" value="修改msg" @click="msg='no'">
             <h3 id="h3">{{msg}}</h3>
         </div>
         <script>
@@ -38,13 +38,13 @@
                 },
                 beforeMount(){
                     //表示内存中已经编译完成，但是还未渲染到页面中
-                   console.log(document.getElementById('h3').innerText)
+                    // console.log(document.getElementById('h3').innerText)
                    //beforeMount执行的时候，页面中的元素，还没有真正替换过来，只是之前写的一些模版文件
 
                 },
                 mounted(){
                     //表示内存中的模板已经真实的挂载到页面中，已经可以看到真实渲染的页面了
-                    console.log(document.getElementById('h3').innerText)
+                    // console.log(document.getElementById('h3').innerText)
                 },
                 beforeUpdate(){
                     //界面还没有被更新，数据肯定被更新了

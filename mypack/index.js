@@ -45,7 +45,17 @@ const hostname = '127.0.0.1';
 const port = 1337;
 
 // 设置跨域访问 是为了方便VUE项目调用api接口针对json
-app.all('/api*', function (req, res, next) {
+// app.all('/api*', function (req, res, next) {
+//     res.header("Access-Control-Allow-Origin", "*");
+//     res.header("Access-Control-Allow-Headers", "content-type");
+//     res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
+//     res.header("X-Powered-By", ' 3.2.1')
+//     res.header("Content-Type", "application/json;charset=utf-8");
+
+//     next();
+
+// });
+app.all('*', function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "content-type");
     res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
@@ -55,7 +65,6 @@ app.all('/api*', function (req, res, next) {
     next();
 
 });
-
 //启动静态资源服务
 app.use(express.static('public', { index: 'login.html' }));
 // app.use(express.static('public'));

@@ -20,7 +20,7 @@
                 stop 阻止冒泡，不会让click溢出到div的click 
                 <input type="button" value="戳他" @click.stop="btnHandler">
             </div> -->
-            <!-- capture实现捕获触发事件机制与 -->
+            <!-- capture实现捕获触发事件机制 优先触发自己，可以实现反冒泡-->
             <!-- <div class="inner" @click.capture="divHandler">
                     stop 阻止冒泡，不会让click溢出到div的click 
                     <input type="button" value="戳他" @click.stop="btnHandler">
