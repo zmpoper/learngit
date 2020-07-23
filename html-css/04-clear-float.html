@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>浮动布局</title>
+    <style>
+        #lside{
+            height: 300px;
+            background: green;
+            width: 50px;
+            float:left
+        }
+        #rside{
+            height: 200px;
+            background-color:red;
+            width: 50px;
+            float:right
+        }
+        #comm{
+            height:300px;
+            background-color: yellow;
+            /* clear:left */
+            /* clear:right */
+            clear:both
+        }
+    </style>
+</head>
+<body>
+    <div id="lside">我是左</div>
+    <div id="rside">我是右</div>
+    <div id="comm">我是普通div</div>
+    <!-- 如何让两个div并排显示 -->
+    
+</body>
+</html>

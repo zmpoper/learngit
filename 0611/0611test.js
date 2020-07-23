@@ -15,3 +15,13 @@
 var m = require('./data.json');
 console.log(m);
 console.log(m.username);
+
+fileName="./goods/GoodsComment.vue"
+const name=fileName.replace(/\.\// ,'' )
+//replace(/.w+$/, '')
+//fileName.replace(/^.//, '').replace(/.w+$/, '')
+console.log(name)
+var arr = new Array;
+arr = name.split("/")
+var name2 = arr[arr.length-1]
+console.log(name2);

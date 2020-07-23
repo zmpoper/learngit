@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第20课 margin重叠现象研究</title>
+    <style>
+        #test1{
+            height: 100px;
+            background:blue;
+            margin-bottom: 50px;
+        }
+
+        #test2{
+            height: 100px;
+            background:green;
+            margin-top:50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="test1">
+        相邻的普通元素，上下边距，并非简单的相加，而是取其中较大边距值<br/>
+        这种现象叫做margin重叠
+    </div>
+    <div id="test2"></div>
+    
+</body>
+</html>
