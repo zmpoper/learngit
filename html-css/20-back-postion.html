@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第27课 大图片背景</title>
+    <style>
+        #test1{
+            border: 1px solid orange;
+            width: 500px;
+            height: 500px;
+            background-image: url(60x60.gif);
+            background-repeat: no-repeat;
+            background-position: center right;
+        }
+        #test2{
+            width: 30px;
+            height: 30px;
+            border: 1px solid blue;
+            background:gray url(60x60.gif) no-repeat -10px -20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="test1"></div>
+    <div id="test2"></div>
+</body>
+</html>
